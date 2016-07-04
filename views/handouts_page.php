@@ -9,12 +9,18 @@
  */
 ?>
 <br>
-<?php echo isset($handoutData['msg'])? $handoutData['msg']: '' ;?>
+<?php 
+if(isset($data['message'])){
+    echo $data['message'];
+}else {
+
+
+echo isset($handoutData['msg'])? $handoutData['msg']: '' ;?>
 <form action='index.php?action=handouts' method="post">
     <div>
         <div>
            
-            Week No : <input type="text" name="weekNo" value ="<?php echo isset($data) ? $data['weekID'] : ''; ?>" />
+            Week No : <input type="text" name="weekNo" value ="<?php echo isset($data) ? $data['weekID'] : ''; ?>" disabled/>
         </div>
         <div>
             Handout No : <input type="text" name="weekNo" value ="<?php echo isset($data) ? $data['handoutID'] : ''; ?>" />
@@ -30,3 +36,7 @@
             
     </div>
 </form>
+
+<?php
+}
+?>

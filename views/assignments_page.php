@@ -14,7 +14,12 @@
 
 $assingment = $assingmentData['data'];
 //print_r($assingment);
+
+if(isset($week_id)){
 ?>
+
+
+
 <form method="post" action="index.php?action=assignments">
     <div>
         Assingnment No : <input type="text" name="assingmentId" value="<?php echo isset($assingment['assignmentIS'])? $assingment['assignmentIS']:''  ?>" />
@@ -27,3 +32,9 @@ $assingment = $assingmentData['data'];
     </div>
     <input type="submit" name="saveAssingment" value="Save" />
 </form>
+
+<?php
+}else {
+    echo 'Please select Week first';
+}
+?>
