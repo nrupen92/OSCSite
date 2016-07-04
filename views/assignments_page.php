@@ -17,10 +17,10 @@ $assingment = $assingmentData['data'];
 ?>
 <form method="post" action="index.php?action=assignments">
     <div>
-        Assingnment No : <input type="text" name="assingmentId" value="<?php echo isset($assingment['assignmentIS'])? $assingment['assignmentIS']:''  ?>"
+        Assingnment No : <input type="text" name="assingmentId" value="<?php echo isset($assingment['assignmentIS'])? $assingment['assignmentIS']:''  ?>" />
     </div>
     <div>
-        Week No : <input type="text" name="weekID" value="<?php echo isset($assingment['weekID'])? $assingment['weekID']:''  ?>"
+        Week No : <input type="text" name="weekID" value="<?php echo isset($assingment['weekID'])? $assingment['weekID']:$week_id  ?>" disabled/>
     </div>
     <div>
         Assingment : <textarea name="assignmentText"><?php echo isset($assingment['assignment_text']) ? $assingment['assignment_text'] : ''; ?> </textarea>
