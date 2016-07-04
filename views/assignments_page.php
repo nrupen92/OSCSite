@@ -13,7 +13,7 @@
 
 
 $assingment = $assingmentData['data'];
-print_r($assingment);
+//print_r($assingment);
 ?>
 <form method="post" action="index.php?action=assignments">
     <div>
@@ -23,7 +23,7 @@ print_r($assingment);
         Week No : <input type="text" name="weekID" value="<?php echo isset($assingment['weekID'])? $assingment['weekID']:''  ?>"
     </div>
     <div>
-        Assingment : <textarea><?php echo isset($assingment['assignment_text']) ? $assingment['assignment_text'] : ''; ?> </textarea>
+        Assingment : <textarea name="assignmentText"><?php echo isset($assingment['assignment_text']) ? $assingment['assignment_text'] : ''; ?> </textarea>
     </div>
     <input type="submit" name="saveAssingment" value="Save" />
 </form>

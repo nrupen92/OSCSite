@@ -8,7 +8,7 @@
  * Date and Time: Jun 25, 2016 12:51:30 AM
  * Project Name: OSCSite
  */
-echo 'assingment controller<br>';
+//echo 'assingment controller<br>';
 $assignmentData =array();
 
 if (isset($_GET['week'])) {
@@ -17,9 +17,18 @@ if (isset($_GET['week'])) {
     
     //echo $week_id;exit;
     
-}else if (isset($_POST['assignment_text'])){
+}
+if (isset($_POST['saveAssingment'])){
     
-   
+
+if(Assignments::saveAssignment($_POST['weekID'],$_POST['assignmentText'])){
+    echo 'record updated';
+}else {
+    echo 'error occured.';
+}
+exit;
+
+
 }
 
 else {
