@@ -9,34 +9,35 @@
  */
 ?>
 <br>
-<?php 
-if(isset($data['message'])){
-    echo $data['message'];
-}else {
-
-
-echo isset($handoutData['msg'])? $handoutData['msg']: '' ;?>
-<form action='index.php?action=handouts' method="post">
-    <div>
-        <div>
-           
-            Week No : <input type="text" name="weekNo" value ="<?php echo isset($data) ? $data['weekID'] : ''; ?>" disabled/>
-        </div>
-        <div>
-            Handout No : <input type="text" name="weekNo" value ="<?php echo isset($data) ? $data['handoutID'] : ''; ?>" />
-        </div>
-        <div>
-            Handout Details:<br>
-            <textarea name="handout-text"><?php echo isset($data) ? $data['handoutText'] : ''; ?> </textarea>
-        </div>
-        <div>
-            <input type="submit" value="Save" name="saveHandout"/>
-        </div>
-            
-            
-    </div>
-</form>
-
 <?php
+if (isset($data['message'])) {
+    echo $data['message'];
+} else {
+
+
+    echo isset($handoutData['msg']) ? $handoutData['msg'] : '';
+    ?>
+    <form action='index.php?action=handouts' method="post">
+        <div>
+            <div>
+
+                Week No : <input type="text" name="weekNo" value ="<?php echo isset($data) ? $data['weekID'] : ''; ?>" disabled/>
+            </div>
+            <div>
+                Handout No : <input type="text" name="weekNo" value ="<?php echo isset($data) ? $data['handoutID'] : ''; ?>" />
+            </div>
+            <div>
+                Handout Details:<br>
+                <textarea name="handout-text"><?php echo isset($data) ? $data['handoutText'] : ''; ?> </textarea>
+            </div>
+            <div>
+                <input type="submit" value="Save" name="saveHandout"/>
+            </div>
+
+
+        </div>
+    </form>
+
+    <?php
 }
 ?>

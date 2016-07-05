@@ -15,7 +15,6 @@ if (isset($_GET['week'])) {
     $week_id = $_GET['week'];
     $assingmentData['data'] = Assignments::getAssingment($week_id);
 
-    //echo $week_id;exit;
 }
 if (isset($_POST['saveAssingment'])) {
 

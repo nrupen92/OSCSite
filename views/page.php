@@ -1,6 +1,5 @@
 <?php
-
-/* 
+/*
  * Student Info: Name=Nrupenkumar Nitinkumar Desai, ID=16076
  * Subject: CS526_HW2_Summer_2016
  * Author: admin
@@ -19,10 +18,11 @@
     </head>
     <body>
         <?php echo $pageData->navigation; ?>
-        <?php 
-            if($pageData->content!=null){
-        include_once "$pageData->content";
-            }?>
+        <?php
+        if ($pageData->content != null) {
+            include_once "$pageData->content";
+        }
+        ?>
         <?php echo $pageData->scriptElements; ?>
     </body>
 </html>

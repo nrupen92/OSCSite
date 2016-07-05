@@ -1,4 +1,5 @@
 <?php
+
 return "
 <nav>
     <a href='index.php?action=faculty/attandance'>Attandence</a>
