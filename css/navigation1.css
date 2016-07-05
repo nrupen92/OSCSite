@@ -1,0 +1,76 @@
+/*
+Student Info: Name=Ken Cheung, ID=1234
+Suject: CS526_Petstore_Summer_2015
+Author: ken
+Filename: navigation.css
+Date and Time: May 27, 2015 11:06:28 AM
+Project Name: petstore
+*/
+/* 
+    Created on : May 27, 2015, 11:06:28 AM
+    Author     : ken
+*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 205px;
+    background-color: #f1f1f1;
+    border: 1px solid #555;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li {
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+.left{
+    float: left;
+}
+
+.clear{    
+    clear: both;
+}
+
+.right{
+    float: right;   
+}
+
+.nav{
+    width: 11%;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+.content{    
+    width: 86%;   
+}
+
+textArea{
+    margin: 0px;
+    width: 582px;
+    height: 88px;
+
+}
+

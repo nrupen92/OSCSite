@@ -4,7 +4,7 @@ include_once "models/PageData.php";
 $pageData = new PageData();
 $pageData->title = "Faculty Portal";
 $pageData->addCSS('css/layout.css');
-$pageData->addCSS('css/navigation.css');
+$pageData->addCSS('css/navigation1.css');
 
 //connect to database
 include_once "db/dbcontext.php";
