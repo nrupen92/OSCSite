@@ -12,8 +12,8 @@
 $assignmentData = array();
 
 if (isset($_GET['week'])) {
-    $week_id = $_GET['week'];
-    $assingmentData['data'] = Assignments::getAssingment($week_id);
+    $weekID = $_GET['week'];
+    $assingmentData['data'] = Assignments::getAssingment($weekID);
 }
 
 if (isset($_POST['saveAssingment'])) {
@@ -22,9 +22,9 @@ if (isset($_POST['saveAssingment'])) {
     } else {
         echo 'error occured.';
     }
-    $week_id = $_POST['weekID'];
+    //$weekID = $_POST['weekID'];
     $weekID = $_POST['weekID'];
-    $assingmentData['data'] = Assignments::getAssingment($week_id);
+    $assingmentData['data'] = Assignments::getAssingment($weekID);
 } else {
     $data['message'] = 'please select week first.';
 }

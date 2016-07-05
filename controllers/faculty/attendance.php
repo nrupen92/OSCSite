@@ -13,12 +13,12 @@
 
 $students = array();
 if (isset($_GET['week'])) {
-    $week_id = $_GET['week'];
+    $weekID = $_GET['week'];
     $attendanceData = array();
     $students = Student::getStudent();
     $i = 0;
     foreach ($students as $student) {
-        $students[$i++]['attendance'] = AttendanceRepo::getAttendance($student['studentID'], $week_id);
+        $students[$i++]['attendance'] = AttendanceRepo::getAttendance($student['studentID'], $weekID);
     }
 } else if (isset($_POST['week_id'])) {
 

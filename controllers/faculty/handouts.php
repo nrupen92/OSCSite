@@ -12,14 +12,13 @@
 
 $handoutData= array();
 if (isset($_GET['week'])) {
-    $week_id = $_GET['week'];
-    $data = HandoutsRepo::getHandout($week_id);
+    $weekID = $_GET['week'];
+    $data = HandoutsRepo::getHandout($weekID);
 }else if (isset($_POST['handout-text'])){
     if(HandoutsRepo::saveHandouts($_POST['handout-text'], $_POST['weekNo'])){
     $handoutData['msg']='record updated';
-    $week_id = $_POST['weekNo'];
     $weekID = $_POST['weekNo'];
-    $data = HandoutsRepo::getHandout($week_id);
+    $data = HandoutsRepo::getHandout($weekID);
     }else{
         $handoutData['msg']='Eror occured.';
     }
