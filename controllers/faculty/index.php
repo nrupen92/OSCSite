@@ -10,13 +10,11 @@
  */
 error_reporting(E_ALL ^ E_NOTICE);
 //complete code listing for controllers/guest/index.php
-include_once 'models/attandence_repo.php';
+include_once 'models/attendance_repo.php';
 include_once 'models/assignments.php';
-include_once 'models/student.php';
-//include_once 'models/attendance.php';
-
 include_once 'models/handout_repo.php';
-//include_once 'models/handouts.php';
+include_once 'models/student.php';
+
 
 
 $hasAction = isset($_GET['action']);

@@ -23,7 +23,7 @@ Select Week :
             </form> 
             <nav>
     
-    <a href='index.php?action=attandence".(isset($weekID)? '&week='.$weekID: '')."'>Attandence</a>
+    <a href='index.php?action=attendance".(isset($weekID)? '&week='.$weekID: '')."'>Attendance</a>
     <a href='index.php?action=handouts".(isset($weekID)? '&week='.$weekID: '')."'>Handouts</a>
     <a href='index.php?action=assignments".(isset($weekID)? '&week='.$weekID: '')."'>Assignments</a>
 </nav>

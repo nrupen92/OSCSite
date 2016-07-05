@@ -1,45 +1,32 @@
 <?php
 
-/* 
+/*
  * Student Info: Name=Nrupenkumar Nitinkumar Desai, ID=16076
  * Subject: CS526_HW2_Summer_2016
- * Author: admin
+ * Author: nrupe
  * Filename: student.php
- * Date and Time: Jun 25, 2016 1:43:14 AM
+ * Date and Time: Jul 4, 2016 5:15:33 PM
  * Project Name: OSCSite
  */
 
-class Student{
-    private $student_id, $stu_fname, $stu_lname;
-    
-    public function __construct($id, $fname, $lname){
-        $this->student_id = $id;
-        $this->stu_fname = $fname;
-        $this->stu_lname = $lname;
-    }
-    function getStudent_id() {
-        return $this->student_id;
-    }
+class Student {
 
-    function getStu_fname() {
-        return $this->stu_fname;
+    public static function getStudent($id=null) {
+        global $db;
+        if($id!=NULL){
+        $query = "SELECT * FROM student WHERE studentID = $id";
+        }else {
+            $query = "SELECT * FROM student";
+        }
+        $result = $db->query($query);
+        $students = array();
+        foreach($result as $d){
+        $student['studentID'] = $d['studentID'];
+        $student['firstname'] = $d['firstname'];
+        $student['lastname'] = $d['lastname'];
+        $students[] =$student;
+        }
+        return $students;
     }
-
-    function getStu_lname() {
-        return $this->stu_lname;
-    }
-
-    function setStudent_id($student_id) {
-        $this->student_id = $student_id;
-    }
-
-    function setStu_fname($stu_fname) {
-        $this->stu_fname = $stu_fname;
-    }
-
-    function setStu_lname($stu_lname) {
-        $this->stu_lname = $stu_lname;
-    }
-
 
 }
