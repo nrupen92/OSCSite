@@ -31,7 +31,7 @@ if (isset($data['message'])) {
             ?>
             <form action="index.php?action=attendance" method="post">
                 <tr>
-                <input type="hidden" name="week_id" value="<?php echo $week_id; ?>" />
+                <input type="hidden" name="week_id" value="<?php echo $weekID; ?>" />
                 <input type="hidden" name="student_id" value="<?php echo $student['studentID']; ?>" />
                 <td ><?php echo $student['studentID']; ?></td>
                 <td name="firstname"><?php echo $student['firstname']; ?></td>

@@ -7,7 +7,10 @@ if (isset($_POST['week'])) {
 }
 $weeks = getWeeks();
 $str_dropdown = '';
+
+
 echo "<pre>";
+$str_dropdown .= '<option >Select</option><br>';
 foreach ($weeks as $week) {
 
     if (isset($weekID) && $weekID == $week['weekID']) {

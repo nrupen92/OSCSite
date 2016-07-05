@@ -11,10 +11,11 @@ include_once "db/dbcontext.php";
 include_once 'db/dbhelper.php';
 $db = DBContext::getDB();
 
-$pageData->navigation = include_once "views/navigation_front.php";
+
 
 $controller = "faculty";
 if (isset($_GET['action'])) {
     $pageData->content = include_once "controllers/$controller/index.php";
 }
+$pageData->navigation = include_once "views/navigation_front.php";
 include_once "views/page.php";

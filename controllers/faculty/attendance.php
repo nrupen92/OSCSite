@@ -22,15 +22,16 @@ if (isset($_GET['week'])) {
     }
 } else if (isset($_POST['week_id'])) {
 
-    $week_id = $_POST['week_id'];
+    $weekID = $_POST['week_id'];
     if (AttendanceRepo::saveAttendance($_POST['week_id'], $_POST['attendance'], $_POST['student_id'])) {
         $data['msg'] = 'Record updated successfully.';
     }
     $students = Student::getStudent();
     $i = 0;
     foreach ($students as $student) {
-        $students[$i++]['attendance'] = AttendanceRepo::getAttendance($student['studentID'], $week_id);
+        $students[$i++]['attendance'] = AttendanceRepo::getAttendance($student['studentID'], $weekID);
     }
+    
 } else {
     $data['message'] = 'please select week first.';
 }

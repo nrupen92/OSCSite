@@ -17,14 +17,15 @@ $assingment = $assingmentData['data'];
 ?>
 <div class="handout">
 <form method="post" action="index.php?action=assignments">
+    <input type="hidden" name="weekID" value="<?php echo isset($assingment['weekID'])? $assingment['weekID']:''  ?>" />
     <div>
         <span>Assingnment No :</span><div> <input type="text" name="assingmentId" value="<?php echo isset($assingment['assignmentIS'])? $assingment['assignmentIS']:''  ?>"/></div>
     </div>
     <div>
-        <span> Week No :</span> <div><input type="text" name="weekID" value="<?php echo isset($assingment['weekID'])? $assingment['weekID']:''  ?>"/></div>
+        <span> Week :</span> <div><input type="text" name="weekID" value="<?php echo isset($assingment['weekID'])? $assingment['weekID']:''  ?>" disabled/></div>
     </div>
     <div>
-        <span> Assingment :</span><div> <textarea class="txtarea"><?php echo isset($assingment['assignment_text']) ? $assingment['assignment_text'] : ''; ?> </textarea></div>
+        <span> Assingment :</span><div> <textarea class="txtarea" name="assignmentText"><?php echo isset($assingment['assignment_text']) ? $assingment['assignment_text'] : ''; ?> </textarea></div>
     </div>
     <br>
     <div><input type="submit" name="saveAssingment" value="Save" /></div>

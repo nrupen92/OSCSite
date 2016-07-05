@@ -14,17 +14,17 @@ $assignmentData = array();
 if (isset($_GET['week'])) {
     $week_id = $_GET['week'];
     $assingmentData['data'] = Assignments::getAssingment($week_id);
-
 }
+
 if (isset($_POST['saveAssingment'])) {
-
-
     if (Assignments::saveAssignment($_POST['weekID'], $_POST['assignmentText'])) {
         echo 'record updated';
     } else {
         echo 'error occured.';
     }
-    exit;
+    $week_id = $_POST['weekID'];
+    $weekID = $_POST['weekID'];
+    $assingmentData['data'] = Assignments::getAssingment($week_id);
 } else {
     $data['message'] = 'please select week first.';
 }

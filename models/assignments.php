@@ -24,8 +24,10 @@ class Assignments {
 
     public static function saveAssignment($weekID, $assignmentText) {
         global $db;
+    
         if (self::isAssingmentExists($weekID)) {
             $query = "update assignments set assignment_text = '$assignmentText' where weekID= '$weekID'";
+          
             if ($db->query($query)) {
                 return true;
             } else {
@@ -46,6 +48,7 @@ class Assignments {
     public static function isAssingmentExists($weekID) {
         global $db;
         $query = "select * from assignments where weekID = $weekID";
+        
         $data = $db->query($query);
         $data = $data->fetch();
         if (empty($data)) {
